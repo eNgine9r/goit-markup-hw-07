@@ -82,7 +82,6 @@ textarea {
 /* Logo */
 
 .logo {
-    display: block;
     padding-top: 24px;
     padding-bottom: 25px;
     margin-right: 93px;
@@ -93,7 +92,7 @@ textarea {
     text-decoration: none;
 }
 
-.logo-span {
+.logo__text {
     color: var(--accent-color);
 }
 
@@ -130,12 +129,12 @@ textarea {
     color: var(--accent-color);
 }
 
-.site-nav__link.current {
+.site-nav__link--current {
     position: relative;
     color: var(--accent-color)
 }
 
-.current::after {
+.site-nav__link--current::after {
     position: absolute;
     bottom: -2px;
     left: 50%;
@@ -432,7 +431,7 @@ textarea {
     padding-bottom: 94px;
 }
 
-.section-title {
+.section__title {
     margin-bottom: 50px;
     color: var(--title-text-color);
     font-weight: 700px;
@@ -444,7 +443,6 @@ textarea {
 /* Features */
 
 .feature {
-    padding-top: 94px;
     padding-bottom: 0px;
 }
 
@@ -470,10 +468,8 @@ textarea {
 }
 
 
-
 .feature-list .title {
     margin-bottom: 10px;
-
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 14px;
@@ -505,19 +501,19 @@ textarea {
     flex-wrap: wrap;
 }
 
-.works .item {
+.works-list__item {
     position: relative;
     margin-right: 30px;
     width: 370px;
     text-align: center;
 }
 
-.works .item:last-child {
+.works-list__item:last-child {
     margin-right: 0px;
 }
 
 
-.works-list-position {
+.works-label {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -526,7 +522,7 @@ textarea {
     background-color: rgba(47, 48, 58, 0.8);
 }
 
-.works-list-text {
+.works-label__text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -540,59 +536,55 @@ textarea {
 
 /* Team */
 
-.team-title-text {
-    padding-top: 30px;
-    padding-bottom: 30px;
+.team {
+    background-color: var(--bacground-color-team-button-list);
 }
 
-.team .item {
+.team-cart {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-cart__item {
     margin-right: 30px;
     width: 270px;
     text-align: center;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    background-color: var(--hero-footer-text-color);
 }
 
-.team .item:last-child {
+.team-cart__item:last-child {
     margin-right: 0px;
 }
 
-.section-team {
-    background-color: #F5F4FA;
-    padding-top: 94px;
-    padding-bottom: 94px;
+.team-cart__label {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-.team-title {
+.team-cart__title {
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
 }
 
-.team-list {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.team-item {
-    background-color: var(--hero-footer-text-color);
-}
-
-.team-text {
+.team-cart__text {
     margin-top: 10px;
     color: var(--priamary-text-color);
     font-size: 16px;
     line-height: 1.19;
 }
 
-.social-list {
+.team-social {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.social-link {
+.team-social__link {
     margin-top: 16px;
     width: 44px;
     height: 44px;
@@ -605,14 +597,14 @@ textarea {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icon {
-    fill: currentColor;
-}
-
-.social-link:hover,
-.social-link:focus {
+.team-social__link:hover,
+.team-social__link:focus {
     background-color: var(--accent-color);
     color: #FFFFFF;
+}
+
+.team-social__icon {
+    fill: currentColor;
 }
 
 /* Сustomers */
@@ -691,12 +683,8 @@ textarea {
     color: var(--accent-color)
 }
 
-.footer-logo {
+.footer__logo {
     color: var(--hero-footer-text-color);
-    font-family: Raleway, sans-serif;
-    font-size: 26px;
-    line-height: 1.19;
-    text-decoration: none;
 }
 
 .footer-link {
