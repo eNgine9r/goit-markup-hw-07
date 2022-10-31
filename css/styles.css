@@ -149,20 +149,20 @@ textarea {
 
 /* Address link */
 
-.address-link {
+.address-list {
     display: flex;
     margin-left: auto;
 }
 
-.address-link .item {
+.address-list__item {
     margin-right: 50px;
 }
 
-.address-link .item:last-child {
+.address-list__item:last-child {
     margin-right: 0px;
 }
 
-.address-link .link {
+.address-list__link {
     display: flex;
     gap: 10px;
     justify-content: center;
