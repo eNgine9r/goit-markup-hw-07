@@ -540,12 +540,12 @@ textarea {
     background-color: var(--bacground-color-team-button-list);
 }
 
-.team-cart {
+.team-card {
     display: flex;
     flex-wrap: wrap;
 }
 
-.team-cart__item {
+.team-card__item {
     margin-right: 30px;
     width: 270px;
     text-align: center;
@@ -554,16 +554,16 @@ textarea {
     background-color: var(--hero-footer-text-color);
 }
 
-.team-cart__item:last-child {
+.team-card__item:last-child {
     margin-right: 0px;
 }
 
-.team-cart__label {
+.team-card__label {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.team-cart__title {
+.team-card__title {
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -571,7 +571,7 @@ textarea {
 }
 
 
-.team-cart__text {
+.team-card__text {
     margin-top: 10px;
     color: var(--priamary-text-color);
     font-size: 16px;
@@ -810,7 +810,25 @@ textarea {
     letter-spacing: 0.06em;
 }
 
-.button-list {
+/* Portfolio page styles */
+/* Filter */
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter__item {
+    margin-right: 8px;
+}
+
+.filter__item:last-child {
+    margin-right: 0px;
+}
+
+.filter__button {
     padding: 6px 22px;
     font-weight: 500;
     font-family: inherit;
@@ -824,44 +842,29 @@ textarea {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-list:hover,
-.button-list:focus {
+.filter__button:hover,
+.filter__button:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     color: var(--hero-footer-text-color);
     background-color: var(--accent-color)
 }
 
-/* Portfolio page styles */
+/* Project-card */
 
-.filter-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.filter-list .item {
-    margin-right: 8px;
-}
-
-.filter-list .item:last-child {
-    margin-right: 0px;
-}
-
-.project-list {
+.project-card {
     display: flex;
     flex-wrap: wrap;
 }
 
-.project-list .item:nth-child(3n) {
+.project-card__item:nth-child(3n) {
     margin-right: 0px;
 }
 
-.project-list .item:nth-last-child(-n + 3) {
+.project-card__item:nth-last-child(-n + 3) {
     margin-bottom: 0px;
 }
 
-.project-list .item {
+.project-card__item {
     width: 370px;
     display: flex;
     margin-right: 30px;
@@ -869,24 +872,24 @@ textarea {
     background-color: var(--bacground-priamary);
 }
 
-.project-link:hover,
-.project-link:focus {
+.project-card__link:hover,
+.project-card__link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-link {
+.project-card__link {
     text-decoration: none;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-thumb {
+.project-card__thumb {
     position: relative;
     overflow: hidden;
     width: 370px;
     height: 294px;
 }
 
-.project-thumb::before {
+.project-card__thumb::before {
     position: absolute;
     content: "";
     display: inline-block;
@@ -897,12 +900,12 @@ textarea {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-link:hover .project-thumb::before,
-.project-link:focus .project-thumb::before {
+.project-card__link:hover .project-card__thumb::before,
+.project-card__link:focus .project-card__thumb::before {
     transform: translateY(0);
 }
 
-.project-thumb-text {
+.project-card__text {
     position: absolute;
     padding: 63px 24px;
     top: 0;
@@ -914,19 +917,19 @@ textarea {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-link:hover .project-thumb-text {
+.project-card__link:hover .project-card__text {
     transform: translateY(0);
 }
 
 
-.project-title-text {
+.description-card {
     padding: 20px 24px;
     border-left: 1px solid #ECECEC;
     border-right: 1px solid #ECECEC;
     border-bottom: 1px solid #ECECEC;
 }
 
-.portfolio-title {
+.description-card__title {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
@@ -934,7 +937,7 @@ textarea {
     letter-spacing: 0.06em;
 }
 
-.portfolio-text {
+.description-card__text {
     margin-top: 4px;
     color: var(--priamary-text-color);
     font-size: 16px;
