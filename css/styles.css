@@ -281,10 +281,6 @@ textarea {
     margin-bottom: 10px;
 }
 
-.form-control {
-    position: relative;
-}
-
 .modal-title {
     margin-bottom: 12px;
     font-weight: 700;
@@ -294,7 +290,11 @@ textarea {
     color: var(--title-text-color);
 }
 
-.form-label {
+.modal-form__control {
+    position: relative;
+}
+
+.modal-form__label {
     display: block;
     padding-bottom: 4px;
     font-size: 12px;
@@ -303,7 +303,7 @@ textarea {
     color: var(--priamary-text-color);
 }
 
-.form-input {
+.modal-form__input {
     padding: 11px 12px 11px 42px;
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -312,11 +312,13 @@ textarea {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus {
+.modal-form__input:focus {
+    fill: currentColor;
+    color: var(--border-color);
     border-color: var(--border-color);
 }
 
-.form-icon {
+.modal-form__icon {
     position: absolute;
     top: 50%;
     left: 12px;
@@ -326,7 +328,7 @@ textarea {
     fill: currentColor;
 }
 
-.form-input:focus+.form-icon {
+.modal-form__input:focus+.modal-form__icon {
     color: var(--border-color);
 }
 
@@ -352,12 +354,12 @@ textarea {
     margin-top: 10px;
 }
 
-.form-input-checkbox {
+.checkbox__input {
     appearance: none;
     padding-left: 12px;
 }
 
-.form-lable-checkbox {
+.checkbox__lable {
     position: relative;
     padding-left: 24px;
     font-size: 14px;
@@ -365,7 +367,7 @@ textarea {
     color: var(--priamary-text-color);
 }
 
-.form-lable-checkbox::before {
+.checkbox__lable::before {
     position: absolute;
     content: "";
     top: 0;
@@ -376,7 +378,7 @@ textarea {
     border-radius: 2px;
 }
 
-.form-lable-checkbox::after {
+.checkbox__lable::after {
     position: absolute;
     content: "";
     top: 0;
@@ -388,19 +390,19 @@ textarea {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input-checkbox:checked+.form-lable-checkbox::after {
+.checkbox__input:checked+.checkbox__lable::after {
     opacity: 1;
 }
 
-.form-policy {
+/* .form-policy {
     margin-top: 20px;
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.71;
     color: var(--priamary-text-color);
-}
+} */
 
-.form-policy-link {
+.checkbox__link {
     font-size: 14px;
     line-height: 1.71;
     color: var(--accent-color);
