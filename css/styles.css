@@ -74,7 +74,7 @@ textarea {
     border-bottom: 1px solid #ECECEC;
 }
 
-.header-pages {
+.header__container {
     display: flex;
     align-items: center;
 }
