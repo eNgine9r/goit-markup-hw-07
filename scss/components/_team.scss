@@ -16,8 +16,10 @@
     background-color: var(--hero-footer-text-color);
 }
 
-.team-card__item:last-child {
-    margin-right: 0px;
+.team-card__item{
+    &:last-child{
+        margin-right: 0px;
+    }
 }
 
 .team-card__label {
@@ -59,10 +61,12 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-social__link:hover,
-.team-social__link:focus {
-    background-color: var(--accent-color);
-    color: #FFFFFF;
+.team-social__link{
+    &:hover,
+    &:focus{
+        background-color: var(--accent-color);
+        color: #FFFFFF;
+    }
 }
 
 .team-social__icon {

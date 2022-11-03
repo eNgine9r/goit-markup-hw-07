@@ -10,10 +10,11 @@
     text-align: center;
 }
 
-.works-list__item:last-child {
-    margin-right: 0px;
+.works-list__item{
+    &:last-child{
+        margin-right: 0px;
+    }
 }
-
 
 .works-label {
     position: absolute;

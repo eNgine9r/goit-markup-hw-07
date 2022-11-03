@@ -19,8 +19,10 @@
     width: 270px;
 }
 
-.feature-list .item:last-child {
+.feature-list .item {
+    &:last-child {
     margin-right: 0px;
+    }
 }
 
 
